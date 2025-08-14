@@ -7,8 +7,8 @@ module.exports = {
     ],
 
     OWNER_NUMBERS: [
-        '94789958225', 
-        '94767799548'  
+        '94754415943', 
+        '94743370472'  
     ],
 
     SESSION_PATH: './session'
