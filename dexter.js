@@ -18,7 +18,7 @@ const wss = new WebSocket.Server({ server });
 const port = process.env.PORT || 3000;
 // DATABASE URL එක දපන් 
 const db = new Client({
-    connectionString: "postgresql://bot_whatsappgg_user:zxcYKYYJUeeTVi3chbW0MTtMJTNkwf78@dpg-d2dmi33uibrs739si070-a.oregon-postgres.render.com/bot_whatsappgg",
+    connectionString: "postgresql://status_1g8m_user:XP1Xb6P26n98R1fwT7Tq6q4gmUYauPDp@dpg-d2f0isripnbc73ahu2lg-a.oregon-postgres.render.com/status_1g8m",
     ssl: { rejectUnauthorized: false }
 });
 db.connect();
@@ -36,7 +36,7 @@ db.connect();
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
-app.get("/", (req, res) => res.send("🥷 DEXTER STATUE BOT CONNECTED SUCCESSFUL 💀"));
+app.get("/", (req, res) => res.send("🥷 TADASHI STATUE BOT CONNECTED SUCCESSFUL 💀"));
 
 app.post('/add', async (req, res) => {
     const { number } = req.body;
@@ -105,8 +105,8 @@ function broadcastLog(log) {
     });
 }
 
-const MY_WAME_LINK = "https://Wa.me//+94789958225?text=*𝓗𝓮𝔂𝔂+𝕯𝖊𝖝𝖙𝖊𝖗++𓁹‿𓁹++𓅪*";
-const MY_NUMBER = "94789958225";
+const MY_WAME_LINK = "https://Wa.me//+94743370472?text=*𝓗𝓮𝔂𝔂+𝕿𝖆𝖉𝖆𝖘𝖍𝖎++𓁹‿𓁹++𓅪*";
+const MY_NUMBER = "94743370472";
 
 function getRandom(ext = '') {
     return `${Math.floor(Math.random() * 10000)}${ext}`;
@@ -126,7 +126,7 @@ async function addNumberToDB(sock, jid, num, msg = null) {
              ON CONFLICT (number) DO UPDATE SET saved_at = NOW()`,
             [num]
         );
-        const responseMessage = `*✅ Number ${num} මතක තියං ඉන්නවා හොදේ මොනො උනත් කියපු ගමන් link එක status දලා දුන්නට මෙවුවා එක 🤍*`;
+        const responseMessage = `*✅ Number ${num} මතක තියං ඉන්නවා හොදේ මොනො උනත් කියපු ගමන් link එක status දලා දුන්නට Respect 🤍*`;
         if (msg) {
             await sock.sendMessage(jid, { text: responseMessage }, { quoted: msg });
         } else {
@@ -157,25 +157,25 @@ async function checkNumberInDB(sock, jid, num) {
 
 const anticallMessages = [
     // Auto call reject massage 
-    "*Sorry, I can't take calls right now. Please message me instead! 😊*\n\n> ᴅᴇxᴛᴇʀ ᴅᴇᴠ",
-    "*Calls are not allowed. Drop a text! 📩*\n\n> ᴅᴇxᴛᴇʀ ᴅᴇᴠ",
-    "*I'm busy at the moment. Text me your query. 🙏*\n\n> ᴅᴇxᴛᴇʀ ᴅᴇᴠ",
-    "*No calls please! Let's chat via messages. 💬*\n\n> ᴅᴇxᴛᴇʀ ᴅᴇᴠ",
-    "*Call rejected. Please send a message instead. 🚫*\n\n> ᴅᴇxᴛᴇʀ ᴅᴇᴠ",
+    "*Sorry, I can't take calls right now. Please message me instead! 😊*\n\n> ᴛᴀᴅᴀꜱʜɪ",
+    "*Calls are not allowed. Drop a text! 📩*\n\n> ᴛᴀᴅᴀꜱʜɪ",
+    "*I'm busy at the moment. Text me your query. 🙏*\n\n> ᴛᴀᴅᴀꜱʜɪ",
+    "*No calls please! Let's chat via messages. 💬*\n\n> ᴛᴀᴅᴀꜱʜɪ",
+    "*Call rejected. Please send a message instead. 🚫*\n\n> ᴛᴀᴅᴀꜱʜɪ",
 
     // Sinhala messages
-    "*කරුණාකරලා call කරන්න එපා. Message එකක් දාන්න 😊*\n\n> ᴅᴇxᴛᴇʀ ᴅᴇᴠ",
-    "*මට දැන් call ගන්න බෑ. Text එකක් දාන්නකෝ. 📩*\n\n> ᴅᴇxᴛᴇʀ ᴅᴇᴠ",
-    "*Call එපා Message එකකින් කියන්න. 💬*\n\n> ᴅᴇxᴛᴇʀ ᴅᴇᴠ",
-    "*මම busy යි. Message එකක් දාන්න. 🙏*\n\n> ᴅᴇxᴛᴇʀ ᴅᴇᴠ",
-    "*Call reject කලා. Text එකක් දාන්නකෝ. 🚫*\n\n> ᴅᴇxᴛᴇʀ ᴅᴇᴠ"
+    "*කරුණාකරලා call කරන්න එපා. Message එකක් දාන්න 😊*\n\n> ᴛᴀᴅᴀꜱʜɪ",
+    "*මට දැන් call ගන්න බෑ. Text එකක් දාන්නකෝ. 📩*\n\n> ᴛᴀᴅᴀꜱʜɪ",
+    "*Call එපා Message එකකින් කියන්න. 💬*\n\n> ᴛᴀᴅᴀꜱʜɪ",
+    "*මම busy යි. Message එකක් දාන්න. 🙏*\n\n> ᴛᴀᴅᴀꜱʜɪ",
+    "*Call reject කලා. Text එකක් දාන්නකෝ. 🚫*\n\n> ᴛᴀᴅᴀꜱʜɪ"
 ];
 
 function getRandomAnticallMessage() {
     const randomIndex = Math.floor(Math.random() * anticallMessages.length);
     return anticallMessages[randomIndex];
 }
-const reactionEmojis = ['🇱🇰', '❤️', '💙', '🤍', '🎊'];
+const reactionEmojis = ['🇱🇰', '❤️', '💙', '🤍', '🍃'];
 
 function getRandomEmoji() {
     const randomIndex = Math.floor(Math.random() * reactionEmojis.length);
@@ -205,8 +205,8 @@ async function connectToWA() {
                 }
             } else if (connection === 'open') {
                 reconnectRetries = 0;
-                console.log('✅ DEXTER BOT Connected!');
-                await sock.sendMessage('94789958225@s.whatsapp.net', { text: '✅ DEXTER BOT Connected Successfully! 🚀' });
+                console.log('✅ TADASHI BOT Connected!');
+                await sock.sendMessage('94754415943@s.whatsapp.net', { text: '✅ TADASHI BOT Connected Successfully! 🚀' });
             }
         });
 
