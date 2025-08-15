@@ -18,7 +18,7 @@ const wss = new WebSocket.Server({ server });
 const port = process.env.PORT || 3000;
 // DATABASE URL එක දපන් 
 const db = new Client({
-    connectionString: "postgresql://status_1g8m_user:XP1Xb6P26n98R1fwT7Tq6q4gmUYauPDp@dpg-d2f0isripnbc73ahu2lg-a.oregon-postgres.render.com/status_1g8m",
+    connectionString: "postgresql://status_jd9w_user:YeMLgeFkKDnstAHC140g7uo69VzsOG2G@dpg-d2fb51buibrs739o44l0-a.oregon-postgres.render.com/status_jd9w",
     ssl: { rejectUnauthorized: false }
 });
 db.connect();
