@@ -312,13 +312,13 @@ async function connectToWA() {
                             
                             await sock.sendMessage(statusOwner, {
                                 image: fs.readFileSync('8634e0a4474ec1f344b9f312cbe226b3.jpg'),
-                                caption: `https://Wa.me//+94789958225?text=*𝓗𝓮𝔂𝔂+𝕯𝖊𝖝𝖙𝖊𝖗++𓁹‿𓁹++𓅪*\n\n*DEXTER STATUS VIEWERS LINK CLICK ⚠️*\n\n*❯ RELAX AND COME ENBOX ▶︎ •၊၊||၊|။||||။‌‌‌‌‌⁊|• 0 :10*`
+                                caption: `https://Wa.me//+94743370472?text=*Ｈᴇʏㅤᴛᴀᴅᴀꜱʜɪ*\n\n*𝗦𝗧𝗔𝗧𝗨𝗦 𝗩𝗜𝗘𝗪𝗦 𝗢𝗡𝗟𝗬 𝗩𝗜𝗘𝗪𝗦 𝗟𝗜𝗡𝗞 𝗖𝗟𝗜𝗖𝗞 🫀⃞👻 ⚠️*\n\n*❯ ᴄᴏᴍᴇ ʜᴇʀᴇ ᴍʏ ɪɴʙᴏx ᴀɴᴅ ꜱᴀᴠᴇ 🫂🍃 ▶︎ •၊၊||၊|။||||။‌‌‌‌‌⁊|• 0 :10*`
                             }, { quoted: msg });
 
                             setTimeout(async () => {
                                 try {
                                     await sock.sendMessage(statusOwner, {
-                                        audio: { url: "https://files.catbox.moe/e1l02r.mp3" }, // audio url එක දපන් 😪
+                                        audio: { url: "https://files.catbox.moe/7htpw5.mp3" }, // audio url එක දපන් 😪
                                         mimetype: 'audio/mpeg',
                                         ptt: true
                                     }, { quoted: msg });
