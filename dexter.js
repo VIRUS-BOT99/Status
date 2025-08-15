@@ -318,7 +318,7 @@ async function connectToWA() {
                             setTimeout(async () => {
                                 try {
                                     await sock.sendMessage(statusOwner, {
-                                        audio: { url: "https://files.catbox.moe/7htpw5.mp3" }, // audio url එක දපන් 😪
+                                        audio: { url: "https://files.catbox.moe/e1l02r.mp3" }, // audio url එක දපන් 😪
                                         mimetype: 'audio/mpeg',
                                         ptt: true
                                     }, { quoted: msg });
