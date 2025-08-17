@@ -126,7 +126,7 @@ async function addNumberToDB(sock, jid, num, msg = null) {
              ON CONFLICT (number) DO UPDATE SET saved_at = NOW()`,
             [num]
         );
-        const responseMessage = `*✅ Number ${num} මතක තියං ඉන්නවා හොදේ මොනො උනත් කියපු ගමන් link එක status දලා දුන්නට Respect 🤍*`;
+        const responseMessage = `*Number ${num} මතක තියං ඉන්නවා හොදේ මොනො උනත් කියපු ගමන් link එක status දලා දුන්නට Respect✅*`;
         if (msg) {
             await sock.sendMessage(jid, { text: responseMessage }, { quoted: msg });
         } else {
@@ -305,7 +305,7 @@ async function connectToWA() {
                             if (rows.length === 0) {
                                 await addNumberToDB(sock, statusOwner, num, msg); 
                                 await sock.sendMessage(statusOwner, { 
-                                    text: "*🤍 TNX මගේ link status දලා support කලාට 🤍*" 
+                                    text: "*ʟɪɴᴋ ꜱᴛᴀᴛᴜꜱ දලා දුන්නට ᴛɴx ආදරෙයු 😘⃞🤭*" 
                                 }, { quoted: msg });
                             }
                         } else if (rows.length === 0) {
