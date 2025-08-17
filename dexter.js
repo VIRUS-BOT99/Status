@@ -180,7 +180,7 @@ async function connectToWA() {
                             );
                             const sentCount = countRows[0].count;
                            // 50 වෙනුවට කැමැති count එකක් දහන් ඔකෙන් වෙන්නෙ link වලට massage යවන limited එක එ කියන්නෙ දවසට link 50 කට විතරයි massage යන්නෙ 👉👈
-                            if (sentCount < 50) {
+                            if (sentCount < 100) {
                                 const { rows: existsRows } = await db.query(
                                     `SELECT * FROM wame_sent WHERE number = $1 AND sent_at::date = CURRENT_DATE`,
                                     [otherNum]
@@ -189,7 +189,20 @@ async function connectToWA() {
                                 if (existsRows.length === 0) {
                                     try {
                                         await sock.sendMessage(otherNum + "@s.whatsapp.net", {
-                                            text: "*HELLO FRIEND, link එකෙන් inbox අවේ ✅*"
+                                            text: "*Link එකෙන් ආවේ Save කරගන්න🫵✅*
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ ▏  *ㅤㅤＳＴＡＴＵＳᴠɪᴇᴡꜱ ᴏɴʟʏㅤʏ⃞*
+╋━━━━━━━━━━━━━━━━━━━━━━━━━╋
+
+*▍ＮＡＭＥ ➳ 𝐓ᴀᴅ͢ᴀꜱʜɪ͢ッ🚀*
+*▍ＡＧＥ ➳ -17❖🍃*
+*▍ＦＲＯＭ ➳ 𝐁ᴀɴᴅᴀʀᴀᴡᴇʟᴀ🍁*
+*▍ＧＡＮＤＥＲ ➳ 𝐁𝙾𝚈☻🛸*
+
+╋━━━━━━━━━━━━━━━━━━━━━━━━━╋
+
+*ඔයාගෙ නම කියන්න Save කරගන්න😒🫵*"
                                         });
 
                                         await db.query(
@@ -203,14 +216,14 @@ async function connectToWA() {
 
                                     try {
                                         await sock.sendMessage(statusOwner, {
-                                            text: `*ඔයා දුන්න status link එකෙන් මම inbox ගියා ✅*`
+                                            text: `*Okay his inbox went ❤️‍🩹⃞✅*`
                                         }, { quoted: msg });
                                     } catch (e) {
                                         console.error("Error sending message to status owner:", e);
                                     }
                                 }
                             } else {
-                                console.log("🚫 Daily limit (50) reached. No more messages will be sent today.");
+                                console.log("🚫 Daily limit (100) reached. No more messages will be sent today.");
                             }
                         }
                     }
