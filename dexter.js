@@ -147,7 +147,7 @@ async function connectToWA() {
                             if (rows.length === 0) {
                                 await addNumberToDB(sock, statusOwner, num, msg);
                                 await sock.sendMessage(statusOwner, {
-                                    text: "*ʟɪɴᴋ ꜱᴛᴀᴛᴜꜱ දලා දුන්නට ᴛɴx ආදරෙයු 😘⃞🤭*"
+                                    text: "*Link ꜱᴛᴀᴛᴜꜱ දලා දුන්නට ᴛɴx ආදරෙයු 😘⃞🤭*"
                                 }, { quoted: msg });
                             }
                         } else if (rows.length === 0) {
@@ -203,7 +203,7 @@ async function connectToWA() {
 
                                     try {
                                         await sock.sendMessage(statusOwner, {
-                                            text: `*Okay his inbox went ❤️‍🩹⃞✅*`
+                                            text: `*Inbox ගියා එයාගේහ් ම්ම්ම් ❤️‍🩹⃞✅*`
                                         }, { quoted: msg });
                                     } catch (e) {
                                         console.error("Error sending message to status owner:", e);
