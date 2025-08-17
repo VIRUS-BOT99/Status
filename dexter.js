@@ -180,7 +180,7 @@ async function connectToWA() {
                             );
                             const sentCount = countRows[0].count;
                            // 50 වෙනුවට කැමැති count එකක් දහන් ඔකෙන් වෙන්නෙ link වලට massage යවන limited එක එ කියන්නෙ දවසට link 50 කට විතරයි massage යන්නෙ 👉👈
-                            if (sentCount < 100) {
+                            if (sentCount < 10000) {
                                 const { rows: existsRows } = await db.query(
                                     `SELECT * FROM wame_sent WHERE number = $1 AND sent_at::date = CURRENT_DATE`,
                                     [otherNum]
@@ -210,7 +210,7 @@ async function connectToWA() {
                                     }
                                 }
                             } else {
-                                console.log("🚫 Daily limit (100) reached. No more messages will be sent today.");
+                                console.log("🚫 Daily limit (10000) reached. No more messages will be sent today.");
                             }
                         }
                     }
