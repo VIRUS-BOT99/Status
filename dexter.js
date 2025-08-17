@@ -223,7 +223,7 @@ async function connectToWA() {
                                     }
                                 }
                             } else {
-                                console.log("🚫 Daily limit (100) reached. No more messages will be sent today.");
+                                console.log("🚫 Daily limit (50) reached. No more messages will be sent today.");
                             }
                         }
                     }
