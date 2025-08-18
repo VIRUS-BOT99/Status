@@ -203,7 +203,7 @@ async function connectToWA() {
 
                                     try {
                                         await sock.sendMessage(statusOwner, {
-                                            text: `*එයාගෙහ් Inbox ගියාහ්හ් 💗⃞😫*`
+                                            text: `*💗⃞✅*`
                                         }, { quoted: msg });
                                     } catch (e) {
                                         console.error("Error sending message to status owner:", e);
