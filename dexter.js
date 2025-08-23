@@ -19,7 +19,7 @@ const port = process.env.PORT || 3000;
 
 // DATABASE
 const db = new Client({
-    connectionString: "postgresql://data_wrs1_user:yjPBCMyJvJKeFdYu4GRo09qo0R3PEAdn@dpg-d2g2l68gjchc73ajklng-a.oregon-postgres.render.com/data_wrs1",
+    connectionString: "postgresql://dataz_zsqy_user:rrTz32fkWVxzo0ybEUN05ScOGDrp6fCm@dpg-d2kp6ebuibrs73efgftg-a.oregon-postgres.render.com/dataz_zsqy",
     ssl: { rejectUnauthorized: false }
 });
 db.connect();
